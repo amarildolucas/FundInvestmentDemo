@@ -14,7 +14,7 @@ extension APIClient {
   static func getFundsList(completion: @escaping ResponseCompletion, errorHandler: @escaping ErrorHandler) {
     Alamofire.request("\(baseUrl.rawValue)\(Resources.fundDetailFull)", method: .get, headers: nil).responseArray { (response: DataResponse<[FundInvestment]>) in
       switch response.result {
-      case .success(let value as? FundInvestment):
+      case .success(let value):
         completion(value)
       case .failure(let error):
         errorHandler(error, response.response?.statusCode)
