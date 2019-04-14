@@ -2,6 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:FundInvestmentDemo.xcodeproj">
+      location = "container:FundInvestmentDemo.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:FundInvestmentDemo.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
