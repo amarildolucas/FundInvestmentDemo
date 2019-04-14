@@ -6,6 +6,7 @@
 //  Copyright © 2019 Amarildo. All rights reserved.
 //
 
+import Kingfisher
 import UIKit
 
 class FundDetailViewController: UIViewController {
@@ -38,7 +39,10 @@ extension FundDetailViewController {
 // MARK: - FundDetailPresenterDelegate
 extension FundDetailViewController: FundDetailPresenterDelegate {
   func didLoadFundDetail(_ fund: FundInvestment) {
-    // strategyVideoThumbnailImageView.image = UIImage()
+    if let imageUrlString = fund.strategyVideo?.thumbnail {
+      let imageUrl = URL(string: imageUrlString)
+      strategyVideoThumbnailImageView.kf.setImage(with: imageUrl)
+    }
     
     fullNameLabel.text = fund.fullName
     initialDateLabel.text = fund.initialDate
