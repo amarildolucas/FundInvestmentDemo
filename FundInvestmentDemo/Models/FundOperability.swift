@@ -10,7 +10,7 @@ import ObjectMapper
 import Foundation
 
 class FundOperability: Mappable {
-  var minimumInitialApplicationAmount: Double?
+  var minimumInitialApplicationAmount: String?
   
   required init?(map: Map) {}
 }

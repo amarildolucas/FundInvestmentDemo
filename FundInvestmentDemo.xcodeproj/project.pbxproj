@@ -8,9 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		09348E5AFF505846CC5FF69D /* Pods_FundInvestmentDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD26CF43FFE248B6E5ADCF80 /* Pods_FundInvestmentDemo.framework */; };
+		8FB2492A22638F6300BA60EB /* FundListCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB2492822638F6300BA60EB /* FundListCollectionCell.swift */; };
+		8FB2492B22638F6300BA60EB /* FundListCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2492922638F6300BA60EB /* FundListCollectionCell.xib */; };
+		8FB2492D2263BB7A00BA60EB /* FundDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB2492C2263BB7A00BA60EB /* FundDetailViewController.swift */; };
+		8FB2492F2263C33100BA60EB /* FundDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB2492E2263C33100BA60EB /* FundDetailPresenter.swift */; };
 		8FE8E80322636DB500D0D255 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE8E80222636DB500D0D255 /* AppDelegate.swift */; };
-		8FE8E80522636DB500D0D255 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE8E80422636DB500D0D255 /* ViewController.swift */; };
-		8FE8E80822636DB500D0D255 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FE8E80622636DB500D0D255 /* Main.storyboard */; };
+		8FE8E80522636DB500D0D255 /* FundsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE8E80422636DB500D0D255 /* FundsListViewController.swift */; };
+		8FE8E80822636DB500D0D255 /* FundInvestment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FE8E80622636DB500D0D255 /* FundInvestment.storyboard */; };
 		8FE8E80A22636DB700D0D255 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FE8E80922636DB700D0D255 /* Assets.xcassets */; };
 		8FE8E80D22636DB700D0D255 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FE8E80B22636DB700D0D255 /* LaunchScreen.storyboard */; };
 		8FE8E81822636DB700D0D255 /* FundInvestmentDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE8E81722636DB700D0D255 /* FundInvestmentDemoTests.swift */; };
@@ -40,10 +44,14 @@
 		188052723C52A1853FACD835 /* Pods_FundInvestmentDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FundInvestmentDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		588D5B71040EB82AC42327DC /* Pods-FundInvestmentDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FundInvestmentDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-FundInvestmentDemo/Pods-FundInvestmentDemo.release.xcconfig"; sourceTree = "<group>"; };
 		59692494A1BCC55E4C8E74CA /* Pods-FundInvestmentDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FundInvestmentDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FundInvestmentDemoTests/Pods-FundInvestmentDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		8FB2492822638F6300BA60EB /* FundListCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundListCollectionCell.swift; sourceTree = "<group>"; };
+		8FB2492922638F6300BA60EB /* FundListCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FundListCollectionCell.xib; sourceTree = "<group>"; };
+		8FB2492C2263BB7A00BA60EB /* FundDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundDetailViewController.swift; sourceTree = "<group>"; };
+		8FB2492E2263C33100BA60EB /* FundDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundDetailPresenter.swift; sourceTree = "<group>"; };
 		8FE8E7FF22636DB500D0D255 /* FundInvestmentDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FundInvestmentDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FE8E80222636DB500D0D255 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8FE8E80422636DB500D0D255 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8FE8E80722636DB500D0D255 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8FE8E80422636DB500D0D255 /* FundsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsListViewController.swift; sourceTree = "<group>"; };
+		8FE8E80722636DB500D0D255 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/FundInvestment.storyboard; sourceTree = "<group>"; };
 		8FE8E80922636DB700D0D255 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8FE8E80C22636DB700D0D255 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8FE8E80E22636DB700D0D255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -84,6 +92,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8FB24924226389F300BA60EB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8FB2492522638E6300BA60EB /* Cells */,
+				8FE8E80422636DB500D0D255 /* FundsListViewController.swift */,
+				8FB2492C2263BB7A00BA60EB /* FundDetailViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8FB2492522638E6300BA60EB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8FB2492822638F6300BA60EB /* FundListCollectionCell.swift */,
+				8FB2492922638F6300BA60EB /* FundListCollectionCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		8FE8E7F622636DB400D0D255 = {
 			isa = PBXGroup;
 			children = (
@@ -109,10 +136,10 @@
 			children = (
 				8FE8E822226373AF00D0D255 /* API */,
 				8FE8E8272263781A00D0D255 /* Models */,
+				8FB24924226389F300BA60EB /* Views */,
 				8FE8E8372263819600D0D255 /* Presenters */,
 				8FE8E80222636DB500D0D255 /* AppDelegate.swift */,
-				8FE8E80422636DB500D0D255 /* ViewController.swift */,
-				8FE8E80622636DB500D0D255 /* Main.storyboard */,
+				8FE8E80622636DB500D0D255 /* FundInvestment.storyboard */,
 				8FE8E80922636DB700D0D255 /* Assets.xcassets */,
 				8FE8E80B22636DB700D0D255 /* LaunchScreen.storyboard */,
 				8FE8E80E22636DB700D0D255 /* Info.plist */,
@@ -155,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				8FE8E838226381A900D0D255 /* FundsListPresenter.swift */,
+				8FB2492E2263C33100BA60EB /* FundDetailPresenter.swift */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -263,9 +291,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FB2492B22638F6300BA60EB /* FundListCollectionCell.xib in Resources */,
 				8FE8E80D22636DB700D0D255 /* LaunchScreen.storyboard in Resources */,
 				8FE8E80A22636DB700D0D255 /* Assets.xcassets in Resources */,
-				8FE8E80822636DB500D0D255 /* Main.storyboard in Resources */,
+				8FE8E80822636DB500D0D255 /* FundInvestment.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,14 +385,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8FE8E80522636DB500D0D255 /* ViewController.swift in Sources */,
+				8FE8E80522636DB500D0D255 /* FundsListViewController.swift in Sources */,
 				8FE8E83122637C6800D0D255 /* FundSpecification.swift in Sources */,
 				8FE8E82F22637C5200D0D255 /* FundOperability.swift in Sources */,
 				8FE8E839226381A900D0D255 /* FundsListPresenter.swift in Sources */,
+				8FB2492A22638F6300BA60EB /* FundListCollectionCell.swift in Sources */,
 				8FE8E83322637E1400D0D255 /* FundRiskProfile.swift in Sources */,
 				8FE8E82D22637C3B00D0D255 /* FundManager.swift in Sources */,
 				8FE8E8292263788600D0D255 /* FundInvestment.swift in Sources */,
 				8FE8E80322636DB500D0D255 /* AppDelegate.swift in Sources */,
+				8FB2492D2263BB7A00BA60EB /* FundDetailViewController.swift in Sources */,
+				8FB2492F2263C33100BA60EB /* FundDetailPresenter.swift in Sources */,
 				8FE8E82B22637BEB00D0D255 /* FundStrategyVideo.swift in Sources */,
 				8FE8E8242263745D00D0D255 /* APIClient.swift in Sources */,
 				8FE8E8262263765500D0D255 /* APIClient+Requests.swift in Sources */,
@@ -389,12 +421,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8FE8E80622636DB500D0D255 /* Main.storyboard */ = {
+		8FE8E80622636DB500D0D255 /* FundInvestment.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				8FE8E80722636DB500D0D255 /* Base */,
 			);
-			name = Main.storyboard;
+			name = FundInvestment.storyboard;
 			sourceTree = "<group>";
 		};
 		8FE8E80B22636DB700D0D255 /* LaunchScreen.storyboard */ = {

@@ -11,13 +11,13 @@ import Foundation
 protocol FundsListPresenterDelegate: NSObjectProtocol {
   func didStartLoading()
   func didFinishLoading()
-  func didSetEmptyFunds()
+  func didShowEmptyFunds()
   func didLoadFundsList(_ funds: [FundInvestment])
   func didFinishedWithError(_ error: Error)
 }
 
 class FundsListPresenter {
-  weak private var delegate: FundsListPresenterDelegate?
+  weak var delegate: FundsListPresenterDelegate?
   
   func getFundsList() {
     delegate?.didStartLoading()
@@ -25,9 +25,9 @@ class FundsListPresenter {
       self?.delegate?.didFinishLoading()
       if let funds = funds as? [FundInvestment] {
         if funds.count == 0 {
-          self?.delegate?.didSetEmptyFunds()
+          self?.delegate?.didShowEmptyFunds()
         } else {
-          self?.delegate?.didLoadFundsList(funds)
+          self?.delegate?.didLoadFundsList(Array(funds.prefix(6)))
         }
       }
     }) { error, _ in
