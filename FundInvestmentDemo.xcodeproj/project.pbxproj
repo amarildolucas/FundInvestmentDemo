@@ -22,6 +22,7 @@
 		8FE8E82F22637C5200D0D255 /* FundOperability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE8E82E22637C5100D0D255 /* FundOperability.swift */; };
 		8FE8E83122637C6800D0D255 /* FundSpecification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE8E83022637C6800D0D255 /* FundSpecification.swift */; };
 		8FE8E83322637E1400D0D255 /* FundRiskProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE8E83222637E1400D0D255 /* FundRiskProfile.swift */; };
+		8FE8E839226381A900D0D255 /* FundsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE8E838226381A900D0D255 /* FundsListPresenter.swift */; };
 		A13F1E6D2EEF3C53F2BA79BD /* Pods_FundInvestmentDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 188052723C52A1853FACD835 /* Pods_FundInvestmentDemoTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		8FE8E82E22637C5100D0D255 /* FundOperability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundOperability.swift; sourceTree = "<group>"; };
 		8FE8E83022637C6800D0D255 /* FundSpecification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundSpecification.swift; sourceTree = "<group>"; };
 		8FE8E83222637E1400D0D255 /* FundRiskProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundRiskProfile.swift; sourceTree = "<group>"; };
+		8FE8E838226381A900D0D255 /* FundsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsListPresenter.swift; sourceTree = "<group>"; };
 		A3F9F5A4FF66B584CA0450A4 /* Pods-FundInvestmentDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FundInvestmentDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FundInvestmentDemoTests/Pods-FundInvestmentDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CD26CF43FFE248B6E5ADCF80 /* Pods_FundInvestmentDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FundInvestmentDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9102F41057552491BB48C01 /* Pods-FundInvestmentDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FundInvestmentDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FundInvestmentDemo/Pods-FundInvestmentDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			children = (
 				8FE8E822226373AF00D0D255 /* API */,
 				8FE8E8272263781A00D0D255 /* Models */,
+				8FE8E8372263819600D0D255 /* Presenters */,
 				8FE8E80222636DB500D0D255 /* AppDelegate.swift */,
 				8FE8E80422636DB500D0D255 /* ViewController.swift */,
 				8FE8E80622636DB500D0D255 /* Main.storyboard */,
@@ -146,6 +149,14 @@
 				8FE8E83022637C6800D0D255 /* FundSpecification.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		8FE8E8372263819600D0D255 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				8FE8E838226381A900D0D255 /* FundsListPresenter.swift */,
+			);
+			path = Presenters;
 			sourceTree = "<group>";
 		};
 		F70277DC705EB491C432AD46 /* Pods */ = {
@@ -348,6 +359,7 @@
 				8FE8E80522636DB500D0D255 /* ViewController.swift in Sources */,
 				8FE8E83122637C6800D0D255 /* FundSpecification.swift in Sources */,
 				8FE8E82F22637C5200D0D255 /* FundOperability.swift in Sources */,
+				8FE8E839226381A900D0D255 /* FundsListPresenter.swift in Sources */,
 				8FE8E83322637E1400D0D255 /* FundRiskProfile.swift in Sources */,
 				8FE8E82D22637C3B00D0D255 /* FundManager.swift in Sources */,
 				8FE8E8292263788600D0D255 /* FundInvestment.swift in Sources */,
