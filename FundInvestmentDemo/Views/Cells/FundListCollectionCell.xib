@@ -24,7 +24,7 @@
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c8W-mu-UHL" userLabel="leftBorderView">
                                 <rect key="frame" x="0.0" y="0.0" width="10" height="140"/>
-                                <color key="backgroundColor" red="0.56862745098039214" green="0.92941176470588238" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="10" id="EG0-cP-SKA"/>
                                 </constraints>
@@ -87,6 +87,7 @@
             <size key="customSize" width="102" height="64"/>
             <connections>
                 <outlet property="containerView" destination="KDD-A1-VMx" id="3lq-Kh-dgZ"/>
+                <outlet property="leftBorderView" destination="c8W-mu-UHL" id="S78-Ub-eK2"/>
                 <outlet property="operability​MinimumInitialApplicationAmountLabel" destination="Jd7-nX-Bdf" id="URb-js-cwR"/>
                 <outlet property="simpleNameLabel" destination="ipC-Z2-Vr8" id="u0I-MV-v9l"/>
                 <outlet property="specificationFundRiskProfileNameLabel" destination="1hu-Fy-kXG" id="A2I-ze-XZq"/>

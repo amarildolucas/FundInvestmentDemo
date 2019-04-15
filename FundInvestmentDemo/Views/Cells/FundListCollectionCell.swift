@@ -10,6 +10,7 @@ import UIKit
 
 class FundListCollectionCell: UICollectionViewCell {
   @IBOutlet weak var containerView: UIView!
+  @IBOutlet weak var leftBorderView: UIView!
   @IBOutlet weak var simpleNameLabel: UILabel!
   @IBOutlet weak var operability​MinimumInitialApplicationAmountLabel: UILabel!
   @IBOutlet weak var specificationFundRiskProfileNameLabel: UILabel!
@@ -26,6 +27,8 @@ extension FundListCollectionCell {
 // MARK: - Custom methods
 extension FundListCollectionCell {
   func layoutView() {
+    leftBorderView.backgroundColor = UIColor.random
+    
     layer.cornerRadius = 10.0
     layer.backgroundColor = UIColor.clear.cgColor
     layer.shadowColor = UIColor.black.cgColor
