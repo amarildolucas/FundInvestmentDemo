@@ -9,6 +9,7 @@
 import UIKit
 
 class FundListCollectionCell: UICollectionViewCell {
+  @IBOutlet weak var containerView: UIView!
   @IBOutlet weak var simpleNameLabel: UILabel!
   @IBOutlet weak var operability​MinimumInitialApplicationAmountLabel: UILabel!
   @IBOutlet weak var specificationFundRiskProfileNameLabel: UILabel!
@@ -18,5 +19,21 @@ class FundListCollectionCell: UICollectionViewCell {
 extension FundListCollectionCell {
   override func awakeFromNib() {
     super.awakeFromNib()
+    layoutView()
+  }
+}
+
+// MARK: - Custom methods
+extension FundListCollectionCell {
+  func layoutView() {
+    layer.cornerRadius = 10.0
+    layer.backgroundColor = UIColor.clear.cgColor
+    layer.shadowColor = UIColor.black.cgColor
+    layer.shadowOffset = CGSize(width: 0, height: 2.0)
+    layer.shadowOpacity = 0.1
+    layer.shadowRadius = 4.0
+    
+    containerView.layer.cornerRadius = 10.0
+    containerView.layer.masksToBounds = true
   }
 }
