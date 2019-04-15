@@ -14,12 +14,12 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController storyboardIdentifier="FundsListViewControllerSID" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="FundsListViewController" customModule="FundInvestmentDemo" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="srA-0Y-XaK">
+                    <collectionView key="view" clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="srA-0Y-XaK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="fuB-Z0-bQ8">
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" sectionInsetReference="layoutMargins" id="fuB-Z0-bQ8">
                             <size key="itemSize" width="320" height="150"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -103,7 +103,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Comprar"/>
                                 <connections>
-                                    <action selector="didTapBuyButton:" destination="LO5-4b-HDP" eventType="touchUpInside" id="5bX-dl-hwF"/>
+                                    <segue destination="Opf-jq-JIg" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="coverVertical" id="mIh-kD-lSL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -120,6 +120,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PCx-Ee-SbP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1481.25" y="791.19718309859161"/>
+        </scene>
+        <!--Fund Purchase Authentication Modal View Controller-->
+        <scene sceneID="Ruq-Ek-lkT">
+            <objects>
+                <viewController id="Opf-jq-JIg" customClass="FundPurchaseAuthenticationModalViewController" customModule="FundInvestmentDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uVD-na-KzR">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HSL-GL-UOA" customClass="ALTextFieldSingleInputModalView" customModule="FundInvestmentDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="418" width="320" height="150"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="75v-JI-4r7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="HSL-GL-UOA" firstAttribute="trailing" secondItem="WI8-pc-r8I" secondAttribute="trailing" id="KTR-Tv-Mng"/>
+                            <constraint firstItem="HSL-GL-UOA" firstAttribute="bottom" secondItem="WI8-pc-r8I" secondAttribute="bottom" id="b80-hB-JN7"/>
+                            <constraint firstItem="HSL-GL-UOA" firstAttribute="leading" secondItem="WI8-pc-r8I" secondAttribute="leading" id="sk4-LR-gBu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WI8-pc-r8I"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="ffb-80-M9u" appends="YES" id="qco-Ek-zkV"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="bottomConstraint" destination="b80-hB-JN7" id="tiT-JA-A7j"/>
+                        <outlet property="modalView" destination="HSL-GL-UOA" id="y3w-QK-7zS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Z8E-Y2-RHM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="ffb-80-M9u">
+                    <connections>
+                        <action selector="didTapGestureRecognizer:" destination="Opf-jq-JIg" id="fBE-uT-pL5"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="2212.5" y="791.19718309859161"/>
         </scene>
     </scenes>
 </document>

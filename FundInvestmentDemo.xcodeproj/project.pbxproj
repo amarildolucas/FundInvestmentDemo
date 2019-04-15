@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		09348E5AFF505846CC5FF69D /* Pods_FundInvestmentDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD26CF43FFE248B6E5ADCF80 /* Pods_FundInvestmentDemo.framework */; };
+		8F4FCDA02265400200F8CF81 /* FundPurchaseAuthenticationModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4FCD9F2265400200F8CF81 /* FundPurchaseAuthenticationModalViewController.swift */; };
 		8FB2492A22638F6300BA60EB /* FundListCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB2492822638F6300BA60EB /* FundListCollectionCell.swift */; };
 		8FB2492B22638F6300BA60EB /* FundListCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2492922638F6300BA60EB /* FundListCollectionCell.xib */; };
 		8FB2492D2263BB7A00BA60EB /* FundDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB2492C2263BB7A00BA60EB /* FundDetailViewController.swift */; };
@@ -28,6 +29,10 @@
 		8FE8E83322637E1400D0D255 /* FundRiskProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE8E83222637E1400D0D255 /* FundRiskProfile.swift */; };
 		8FE8E839226381A900D0D255 /* FundsListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE8E838226381A900D0D255 /* FundsListPresenter.swift */; };
 		8FEB8861226521C3008D91EC /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEB8860226521C3008D91EC /* UIColor+Extension.swift */; };
+		8FEB88642265391B008D91EC /* ALTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEB88632265391B008D91EC /* ALTextFieldView.swift */; };
+		8FEB8866226539C7008D91EC /* ALTextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FEB8865226539C7008D91EC /* ALTextFieldView.xib */; };
+		8FEB886822653B9B008D91EC /* ALTextFieldSingleInputModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEB886722653B9B008D91EC /* ALTextFieldSingleInputModalView.swift */; };
+		8FEB886A22653C0B008D91EC /* ALTextFieldSingleInputModalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FEB886922653C0B008D91EC /* ALTextFieldSingleInputModalView.xib */; };
 		A13F1E6D2EEF3C53F2BA79BD /* Pods_FundInvestmentDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 188052723C52A1853FACD835 /* Pods_FundInvestmentDemoTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +50,7 @@
 		188052723C52A1853FACD835 /* Pods_FundInvestmentDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FundInvestmentDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		588D5B71040EB82AC42327DC /* Pods-FundInvestmentDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FundInvestmentDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-FundInvestmentDemo/Pods-FundInvestmentDemo.release.xcconfig"; sourceTree = "<group>"; };
 		59692494A1BCC55E4C8E74CA /* Pods-FundInvestmentDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FundInvestmentDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FundInvestmentDemoTests/Pods-FundInvestmentDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		8F4FCD9F2265400200F8CF81 /* FundPurchaseAuthenticationModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundPurchaseAuthenticationModalViewController.swift; sourceTree = "<group>"; };
 		8FB2492822638F6300BA60EB /* FundListCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundListCollectionCell.swift; sourceTree = "<group>"; };
 		8FB2492922638F6300BA60EB /* FundListCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FundListCollectionCell.xib; sourceTree = "<group>"; };
 		8FB2492C2263BB7A00BA60EB /* FundDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundDetailViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +75,10 @@
 		8FE8E83222637E1400D0D255 /* FundRiskProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundRiskProfile.swift; sourceTree = "<group>"; };
 		8FE8E838226381A900D0D255 /* FundsListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsListPresenter.swift; sourceTree = "<group>"; };
 		8FEB8860226521C3008D91EC /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		8FEB88632265391B008D91EC /* ALTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALTextFieldView.swift; sourceTree = "<group>"; };
+		8FEB8865226539C7008D91EC /* ALTextFieldView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ALTextFieldView.xib; sourceTree = "<group>"; };
+		8FEB886722653B9B008D91EC /* ALTextFieldSingleInputModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ALTextFieldSingleInputModalView.swift; sourceTree = "<group>"; };
+		8FEB886922653C0B008D91EC /* ALTextFieldSingleInputModalView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ALTextFieldSingleInputModalView.xib; sourceTree = "<group>"; };
 		A3F9F5A4FF66B584CA0450A4 /* Pods-FundInvestmentDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FundInvestmentDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FundInvestmentDemoTests/Pods-FundInvestmentDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CD26CF43FFE248B6E5ADCF80 /* Pods_FundInvestmentDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FundInvestmentDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9102F41057552491BB48C01 /* Pods-FundInvestmentDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FundInvestmentDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FundInvestmentDemo/Pods-FundInvestmentDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -100,6 +110,7 @@
 				8FB2492522638E6300BA60EB /* Cells */,
 				8FE8E80422636DB500D0D255 /* FundsListViewController.swift */,
 				8FB2492C2263BB7A00BA60EB /* FundDetailViewController.swift */,
+				8F4FCD9F2265400200F8CF81 /* FundPurchaseAuthenticationModalViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -136,6 +147,7 @@
 		8FE8E80122636DB500D0D255 /* FundInvestmentDemo */ = {
 			isa = PBXGroup;
 			children = (
+				8FEB8862226538E3008D91EC /* Common */,
 				8FEB885F226520F7008D91EC /* Extension */,
 				8FE8E822226373AF00D0D255 /* API */,
 				8FE8E8272263781A00D0D255 /* Models */,
@@ -196,6 +208,17 @@
 				8FEB8860226521C3008D91EC /* UIColor+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		8FEB8862226538E3008D91EC /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8FEB88632265391B008D91EC /* ALTextFieldView.swift */,
+				8FEB8865226539C7008D91EC /* ALTextFieldView.xib */,
+				8FEB886722653B9B008D91EC /* ALTextFieldSingleInputModalView.swift */,
+				8FEB886922653C0B008D91EC /* ALTextFieldSingleInputModalView.xib */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		F70277DC705EB491C432AD46 /* Pods */ = {
@@ -304,6 +327,8 @@
 			files = (
 				8FB2492B22638F6300BA60EB /* FundListCollectionCell.xib in Resources */,
 				8FE8E80D22636DB700D0D255 /* LaunchScreen.storyboard in Resources */,
+				8FEB886A22653C0B008D91EC /* ALTextFieldSingleInputModalView.xib in Resources */,
+				8FEB8866226539C7008D91EC /* ALTextFieldView.xib in Resources */,
 				8FE8E80A22636DB700D0D255 /* Assets.xcassets in Resources */,
 				8FE8E80822636DB500D0D255 /* FundInvestment.storyboard in Resources */,
 			);
@@ -399,12 +424,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FE8E80522636DB500D0D255 /* FundsListViewController.swift in Sources */,
+				8FEB88642265391B008D91EC /* ALTextFieldView.swift in Sources */,
 				8FE8E83122637C6800D0D255 /* FundSpecification.swift in Sources */,
 				8FE8E82F22637C5200D0D255 /* FundOperability.swift in Sources */,
 				8FE8E839226381A900D0D255 /* FundsListPresenter.swift in Sources */,
 				8FB2492A22638F6300BA60EB /* FundListCollectionCell.swift in Sources */,
+				8FEB886822653B9B008D91EC /* ALTextFieldSingleInputModalView.swift in Sources */,
 				8FE8E83322637E1400D0D255 /* FundRiskProfile.swift in Sources */,
 				8FE8E82D22637C3B00D0D255 /* FundManager.swift in Sources */,
+				8F4FCDA02265400200F8CF81 /* FundPurchaseAuthenticationModalViewController.swift in Sources */,
 				8FE8E8292263788600D0D255 /* FundInvestment.swift in Sources */,
 				8FE8E80322636DB500D0D255 /* AppDelegate.swift in Sources */,
 				8FEB8861226521C3008D91EC /* UIColor+Extension.swift in Sources */,

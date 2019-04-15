@@ -15,10 +15,6 @@ class FundDetailViewController: UIViewController {
   @IBOutlet weak var initialDateLabel: UILabel!
   @IBOutlet weak var fundManagerDescriptionLabel: UILabel!
   
-  @IBAction func didTapBuyButton(_ sender: UIButton) {
-  
-  }
-  
   private let fundDetailPresenter = FundDetailPresenter()
   var fundDetail: FundInvestment?
 }
