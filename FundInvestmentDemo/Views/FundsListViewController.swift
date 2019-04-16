@@ -38,7 +38,6 @@ extension FundsListViewController: FundsListPresenterDelegate {
   func didLoadFundsList(_ funds: [FundInvestment]) {
     collectionView.isHidden = false
     self.funds = funds
-    print(self.funds)
   }
   
   func didFinishedWithError(_ error: Error) {

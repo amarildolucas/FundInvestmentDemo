@@ -15,6 +15,21 @@ class FundPurchaseAuthenticationModalViewController: UIViewController {
   @IBAction func didTapGestureRecognizer(_ sender: UITapGestureRecognizer) {
     hidesKeyboard()
   }
+  
+  let fundPurchaseAuthenticationPresenter = FundPurchaseAuthenticationPresenter()
+}
+
+// MARK
+extension FundPurchaseAuthenticationModalViewController: FundPurchaseAuthenticationPresenterDelegate {
+  func didFinishAuthenticationWithSuccess() {
+    dismiss(animated: true) {
+      self.navigationController?.popViewController(animated: true)
+    }
+  }
+  
+  func didFinishAuthenticationWithError(_ message: String) {
+    modalView.textFieldView.messageError = message
+  }
 }
 
 // MARK: - UIViewController lifecycle
@@ -24,6 +39,8 @@ extension FundPurchaseAuthenticationModalViewController {
     
     layoutView()
     showsKeyBoard()
+    
+    fundPurchaseAuthenticationPresenter.delegate = self
   }
 }
 
@@ -40,8 +57,7 @@ extension FundPurchaseAuthenticationModalViewController {
     }
     
     modalView.didTapConfirmButton = { [weak self] modalView in
-      // TODO: Presenter logic...
-      self?.navigationController?.popToRootViewController(animated: true)
+      self?.fundPurchaseAuthenticationPresenter.authorizePayment(password: modalView.textFieldView.textField.text ?? "")
     }
   }
 }

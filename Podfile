@@ -9,6 +9,7 @@ target 'FundInvestmentDemo' do
 
   pod 'Alamofire', '~> 4.7'
   pod 'AlamofireObjectMapper', '~> 5.2.0'
+  pod 'KeychainAccess'
   pod 'Kingfisher', '~> 5.0'
 
   target 'FundInvestmentDemoTests' do
