@@ -8,20 +8,17 @@
 
 import Foundation
 
-// MARK: - Date
+// MARK: - Currency
 extension String {
-  var date: String {
-    let dateFormatter = DateFormatter()
-    dateFormatter.locale = Locale(identifier: "pt_BR_POSIX")
-    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
-    dateFormatter.timeZone = TimeZone(secondsFromGMT: 0)
+  var brlCurrency: String? {
+    let double = (self as NSString).doubleValue
+    let number = NSNumber(value: double)
+    let formatter = NumberFormatter()
     
-    let date = dateFormatter.date(from: self)
-    let dateFormatterString = DateFormatter()
-    dateFormatterString .dateFormat = "d'/'MM'/'yy"
+    formatter.locale = Locale(identifier: "pt_BR")
+    formatter.currencySymbol = "R$"
+    formatter.numberStyle = .currency
     
-    let string = dateFormatterString.string(from: date!)
-    
-    return string
+    return formatter.string(from: number)
   }
 }

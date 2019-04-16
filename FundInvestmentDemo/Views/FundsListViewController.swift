@@ -89,8 +89,11 @@ extension FundsListViewController: UICollectionViewDataSource {
     let fund = funds[indexPath.row]
     
     cell.simpleNameLabel.text = fund.simpleName
-    cell.operability​MinimumInitialApplicationAmountLabel.text = fund.operability?.minimumInitialApplicationAmount
     cell.specificationFundRiskProfileNameLabel.text = fund.specification?.fundRiskProfile?.name
+    
+    if let amount = fund.operability?.minimumInitialApplicationAmount {
+      cell.operability​MinimumInitialApplicationAmountLabel.text = amount.brlCurrency
+    }
     
     return cell
   }
