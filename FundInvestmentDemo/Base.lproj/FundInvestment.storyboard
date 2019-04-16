@@ -75,7 +75,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Comprar"/>
                                 <connections>
-                                    <segue destination="Opf-jq-JIg" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="coverVertical" id="mIh-kD-lSL"/>
+                                    <segue destination="Opf-jq-JIg" kind="presentation" identifier="FundPurchaseAuthenticationModalViewControllerSegue" modalPresentationStyle="overCurrentContext" modalTransitionStyle="coverVertical" id="mIh-kD-lSL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -190,9 +190,32 @@
                     <view key="view" contentMode="scaleToFill" id="HIX-ub-Pod">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="eHl-F4-ZuY">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.98823529409999999" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" sectionInsetReference="layoutMargins" id="Kw4-p3-kOx">
+                                    <size key="itemSize" width="320" height="150"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eHl-F4-ZuY" firstAttribute="bottom" secondItem="4BE-Ra-P5W" secondAttribute="bottom" id="0y0-8Q-gwI"/>
+                            <constraint firstItem="eHl-F4-ZuY" firstAttribute="trailing" secondItem="4BE-Ra-P5W" secondAttribute="trailing" id="SpO-yS-kh0"/>
+                            <constraint firstItem="eHl-F4-ZuY" firstAttribute="top" secondItem="HIX-ub-Pod" secondAttribute="top" id="UeZ-4t-mLM"/>
+                            <constraint firstItem="eHl-F4-ZuY" firstAttribute="leading" secondItem="4BE-Ra-P5W" secondAttribute="leading" id="yNA-YO-R38"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="4BE-Ra-P5W"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="eHl-F4-ZuY" id="6i7-lv-A98"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hRV-SO-o1U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

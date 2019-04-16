@@ -30,6 +30,16 @@ extension FundDetailViewController {
       fundDetailPresenter.getFundDetail(fundDetail)
     }
   }
+  
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "FundPurchaseAuthenticationModalViewControllerSegue" {
+      if let viewController = segue.destination as? FundPurchaseAuthenticationModalViewController {
+        if let fund = fundDetail {
+          viewController.fundInvestment = fund
+        }
+      }
+    }
+  }
 }
 
 // MARK: - FundDetailPresenterDelegate

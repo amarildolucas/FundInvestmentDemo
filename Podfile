@@ -11,6 +11,7 @@ target 'FundInvestmentDemo' do
   pod 'AlamofireObjectMapper', '~> 5.2.0'
   pod 'KeychainAccess'
   pod 'Kingfisher', '~> 5.0'
+  pod 'RealmSwift'
 
   target 'FundInvestmentDemoTests' do
     inherit! :search_paths

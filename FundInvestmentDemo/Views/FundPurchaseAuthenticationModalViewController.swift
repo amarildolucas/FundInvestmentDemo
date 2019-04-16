@@ -17,17 +17,31 @@ class FundPurchaseAuthenticationModalViewController: UIViewController {
   }
   
   let fundPurchaseAuthenticationPresenter = FundPurchaseAuthenticationPresenter()
+  var fundInvestment: FundInvestment?
 }
 
 // MARK
 extension FundPurchaseAuthenticationModalViewController: FundPurchaseAuthenticationPresenterDelegate {
   func didFinishAuthenticationWithSuccess() {
+    let fund = FundPurchase()
+    fund.simpleName = fundInvestment?.simpleName
+    fund.minimumInitialApplicationAmount = fundInvestment?.operability?.minimumInitialApplicationAmount
+    fund.fundRiskProfileName = fundInvestment?.specification?.fundRiskProfile?.name
+    
+    fundPurchaseAuthenticationPresenter.purchase(fund: fund)
+  }
+  
+  func didFinishAuthenticationWithError(_ message: String) {
+    modalView.textFieldView.messageError = message
+  }
+  
+  func didPurchaseFundWithSuccess(_ fund: FundPurchase) {
     dismiss(animated: true) {
       self.navigationController?.popViewController(animated: true)
     }
   }
   
-  func didFinishAuthenticationWithError(_ message: String) {
+  func didPurchaseFundWithError(_ message: String) {
     modalView.textFieldView.messageError = message
   }
 }
