@@ -42,7 +42,7 @@ extension FundDetailViewController: FundDetailPresenterDelegate {
     
     fullNameLabel.text = fund.fullName
     initialDateLabel.text = fund.initialDate
-    fundManagerDescriptionLabel.text = fund.fundManager?.description
+    fundManagerDescriptionLabel.text =  fund.fundManager?.description
   }
 }
 
