@@ -10,15 +10,7 @@ import UIKit
 
 class FundsListViewController: UIViewController {
   @IBOutlet var collectionView: UICollectionView!
-  
-  lazy var indicatorActivityView: UIActivityIndicatorView = {
-    let indicator = UIActivityIndicatorView()
-    indicator.center = self.view.center
-    indicator.tintColor = UIColor(red: 34/255, green: 156/255, blue: 160/255, alpha: 1.0)
-    indicator.style = .whiteLarge
-    
-    return indicator
-  }()
+  @IBOutlet weak var indicatorActivityView: UIActivityIndicatorView!
   
   lazy var refreshControl: UIRefreshControl = {
     let control = UIRefreshControl()
@@ -81,7 +73,7 @@ extension FundsListViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    view.addSubview(indicatorActivityView)
+    indicatorActivityView.isHidden = true
     configureCollectionView()
     
     fundsListPresenter.delegate = self
@@ -105,7 +97,7 @@ extension FundsListViewController {
   func configureCollectionView() {
     collectionView.isHidden = true
     collectionView.refreshControl = refreshControl
-    collectionView.register(UINib(nibName: "FundListCollectionCell", bundle: nil), forCellWithReuseIdentifier: "FundListCollectionCell")
+    collectionView.register(UINib(nibName: FundListCollectionCell.nibName, bundle: nil), forCellWithReuseIdentifier: FundListCollectionCell.identifier)
     collectionView.dataSource = self
     collectionView.delegate = self
   }
@@ -117,12 +109,16 @@ extension FundsListViewController {
 
 // MARK: - UICollectionViewDataSource
 extension FundsListViewController: UICollectionViewDataSource {
+  func numberOfSections(in collectionView: UICollectionView) -> Int {
+    return 1
+  }
+  
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return funds.count
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FundListCollectionCell", for: indexPath) as? FundListCollectionCell else {
+    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FundListCollectionCell.identifier, for: indexPath) as? FundListCollectionCell else {
       return UICollectionViewCell()
     }
     
@@ -143,5 +139,11 @@ extension FundsListViewController: UICollectionViewDataSource {
 extension FundsListViewController: UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     performSegue(withIdentifier: "FundDetailViewControllerSegue", sender: indexPath)
+  }
+}
+
+extension FundsListViewController: UICollectionViewDelegateFlowLayout {
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    return CGSize(width: collectionView.bounds.size.width, height: FundListCollectionCell.fundListCollectionCellHeight)
   }
 }

@@ -10,33 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Lista de fundos-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController storyboardIdentifier="FundsListViewControllerSID" title="Lista de fundos" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="FundsListViewController" customModule="FundInvestmentDemo" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" id="srA-0Y-XaK">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" sectionInsetReference="layoutMargins" id="fuB-Z0-bQ8">
-                            <size key="itemSize" width="320" height="150"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells/>
-                    </collectionView>
-                    <navigationItem key="navigationItem" title="Lista de fundos" id="LgF-mX-xDH"/>
-                    <connections>
-                        <outlet property="collectionView" destination="srA-0Y-XaK" id="KgO-po-Ii4"/>
-                        <segue destination="LO5-4b-HDP" kind="show" identifier="FundDetailViewControllerSegue" id="5bk-Fr-8vV"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1695" y="792.25352112676057"/>
-        </scene>
         <!--Detalhes-->
         <scene sceneID="Juc-NE-BEO">
             <objects>
@@ -162,12 +135,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="VIs-Bd-nEK" firstAttribute="leading" secondItem="3Za-aG-9V7" secondAttribute="leading" id="74k-L6-bHN"/>
-                            <constraint firstItem="iyh-gY-T7H" firstAttribute="bottom" secondItem="3Za-aG-9V7" secondAttribute="bottom" id="8Dt-WR-WaR"/>
+                            <constraint firstItem="iyh-gY-T7H" firstAttribute="bottom" secondItem="phh-DU-N9z" secondAttribute="bottom" id="8Dt-WR-WaR"/>
                             <constraint firstItem="VIs-Bd-nEK" firstAttribute="trailing" secondItem="3Za-aG-9V7" secondAttribute="trailing" id="TRP-M6-Igo"/>
                             <constraint firstItem="VIs-Bd-nEK" firstAttribute="top" secondItem="3Za-aG-9V7" secondAttribute="top" id="bKU-8W-Hud"/>
-                            <constraint firstItem="iyh-gY-T7H" firstAttribute="trailing" secondItem="3Za-aG-9V7" secondAttribute="trailing" id="c41-FD-xrS"/>
+                            <constraint firstItem="iyh-gY-T7H" firstAttribute="trailing" secondItem="phh-DU-N9z" secondAttribute="trailing" id="c41-FD-xrS"/>
                             <constraint firstItem="iyh-gY-T7H" firstAttribute="top" secondItem="VIs-Bd-nEK" secondAttribute="bottom" id="cgI-gf-PVy"/>
-                            <constraint firstItem="iyh-gY-T7H" firstAttribute="leading" secondItem="3Za-aG-9V7" secondAttribute="leading" id="pBd-d2-8Wj"/>
+                            <constraint firstItem="iyh-gY-T7H" firstAttribute="leading" secondItem="phh-DU-N9z" secondAttribute="leading" id="pBd-d2-8Wj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3Za-aG-9V7"/>
                     </view>
@@ -175,8 +148,8 @@
                     <connections>
                         <outlet property="contentView" destination="iyh-gY-T7H" id="vQH-gG-fXs"/>
                         <outlet property="segmentedControlView" destination="VIs-Bd-nEK" id="oFt-wO-mBD"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="FundsListViewControllerSegue" id="zRf-9z-dpj"/>
                         <segue destination="o69-vr-GfJ" kind="show" identifier="FundsPurchasedViewControllerSegue" id="vQB-qf-VUO"/>
+                        <segue destination="Ac1-Oz-7ie" kind="show" identifier="FundsListViewControllerSegue" id="p43-si-w2w"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pNP-zb-e9g" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -219,7 +192,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hRV-SO-o1U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1695" y="1543.3098591549297"/>
+            <point key="canvasLocation" x="1802" y="1482"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="h9A-42-Vic">
@@ -248,6 +221,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YaQ-tz-rQL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-37.5" y="1216.9014084507041"/>
+        </scene>
+        <!--Lista de fundos-->
+        <scene sceneID="Enq-AS-lWG">
+            <objects>
+                <viewController storyboardIdentifier="FundsListViewControllerSID" title="Lista de fundos" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ac1-Oz-7ie" customClass="FundsListViewController" customModule="FundInvestmentDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6C2-TD-wNb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Xi4-KO-17i">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" red="0.98823529409999999" green="0.98823529409999999" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Iae-40-dFo">
+                                    <size key="itemSize" width="320" height="150"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="7yF-oc-oE9">
+                                <rect key="frame" x="141.5" y="265.5" width="37" height="37"/>
+                                <color key="tintColor" red="0.1333333333" green="0.61176470589999998" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="37" id="XwP-DE-HH2"/>
+                                    <constraint firstAttribute="height" constant="37" id="ieW-4V-yPD"/>
+                                </constraints>
+                                <color key="color" red="0.1333333333" green="0.61176470589999998" blue="0.62745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="7yF-oc-oE9" firstAttribute="centerX" secondItem="6C2-TD-wNb" secondAttribute="centerX" id="46B-Ly-P65"/>
+                            <constraint firstItem="Xi4-KO-17i" firstAttribute="top" secondItem="6C2-TD-wNb" secondAttribute="top" id="DYU-6q-Wy8"/>
+                            <constraint firstItem="7yF-oc-oE9" firstAttribute="centerY" secondItem="6C2-TD-wNb" secondAttribute="centerY" id="EZY-Iy-37T"/>
+                            <constraint firstItem="Xi4-KO-17i" firstAttribute="leading" secondItem="1rS-6o-e4d" secondAttribute="leading" id="KAx-5J-FZn"/>
+                            <constraint firstItem="Xi4-KO-17i" firstAttribute="bottom" secondItem="1rS-6o-e4d" secondAttribute="bottom" id="mOD-bM-8ut"/>
+                            <constraint firstItem="Xi4-KO-17i" firstAttribute="trailing" secondItem="1rS-6o-e4d" secondAttribute="trailing" id="yTx-ho-Q0X"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1rS-6o-e4d"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Xi4-KO-17i" id="lGO-jd-Udl"/>
+                        <outlet property="indicatorActivityView" destination="7yF-oc-oE9" id="tpa-tR-Ld9"/>
+                        <segue destination="LO5-4b-HDP" kind="show" identifier="FundDetailViewControllerSegue" id="gqC-dD-Y9Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xR7-rR-RcO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1746" y="791"/>
         </scene>
     </scenes>
 </document>

@@ -14,6 +14,8 @@ class FundListCollectionCell: UICollectionViewCell {
   @IBOutlet weak var simpleNameLabel: UILabel!
   @IBOutlet weak var operability​MinimumInitialApplicationAmountLabel: UILabel!
   @IBOutlet weak var specificationFundRiskProfileNameLabel: UILabel!
+  
+  static let fundListCollectionCellHeight: CGFloat = 150.0
 }
 
 // MARK: - UIColletionViewCell lifecycle
@@ -21,6 +23,14 @@ extension FundListCollectionCell {
   override func awakeFromNib() {
     super.awakeFromNib()
     layoutView()
+  }
+  
+  override func prepareForReuse() {
+    super.prepareForReuse()
+    
+    simpleNameLabel.text = nil
+    operability​MinimumInitialApplicationAmountLabel.text = nil
+    specificationFundRiskProfileNameLabel.text = nil
   }
 }
 

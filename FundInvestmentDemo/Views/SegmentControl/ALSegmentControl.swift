@@ -16,14 +16,15 @@ class ALSegmentedControl: UIView {
     control.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14, weight: .medium),
                                     NSAttributedString.Key.foregroundColor: UIColor.black], for: .normal)
     control.setTitleTextAttributes([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 14, weight: .semibold),
-                                    NSAttributedString.Key.foregroundColor: UIColor.black], for: .selected)
+                                    NSAttributedString.Key.foregroundColor: UIColor(red: 34/255, green: 156/255, blue: 160/255, alpha: 1.0)], for: .selected)
     control.translatesAutoresizingMaskIntoConstraints = false
+    
     return control
   }()
   
   let bottomBar: UIView = {
     let view = UIView()
-    view.backgroundColor = .black
+    view.backgroundColor = UIColor(red: 34/255, green: 156/255, blue: 160/255, alpha: 1.0)
     view.translatesAutoresizingMaskIntoConstraints = false
     return view
   }()
@@ -32,7 +33,10 @@ class ALSegmentedControl: UIView {
   
   var segmentItems: [String] = [] {
     didSet {
-      guard segmentItems.count > 0 else { return }
+      guard segmentItems.count > 0 else {
+        return
+      }
+      
       addSegmentItems()
       configureConstraints()
       configureBottomBarWidthAnchorConstraints()

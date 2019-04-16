@@ -95,7 +95,7 @@ extension FundsPurchasedViewController {
   func configureCollectionView() {
     collectionView.isHidden = true
     collectionView.refreshControl = refreshControl
-    collectionView.register(UINib(nibName: "FundListCollectionCell", bundle: nil), forCellWithReuseIdentifier: "FundListCollectionCell")
+    collectionView.register(UINib(nibName: FundListCollectionCell.nibName, bundle: nil), forCellWithReuseIdentifier: FundListCollectionCell.identifier)
     collectionView.dataSource = self
   }
   
@@ -111,7 +111,7 @@ extension FundsPurchasedViewController: UICollectionViewDataSource {
   }
   
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FundListCollectionCell", for: indexPath) as? FundListCollectionCell else {
+    guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FundListCollectionCell.identifier, for: indexPath) as? FundListCollectionCell else {
       return UICollectionViewCell()
     }
     
