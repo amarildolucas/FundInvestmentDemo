@@ -11,11 +11,27 @@ import UIKit
 class FundsListViewController: UIViewController {
   @IBOutlet var collectionView: UICollectionView!
   
+  lazy var indicatorActivityView: UIActivityIndicatorView = {
+    let indicator = UIActivityIndicatorView()
+    indicator.center = self.view.center
+    indicator.tintColor = UIColor(red: 34/255, green: 156/255, blue: 160/255, alpha: 1.0)
+    indicator.style = .whiteLarge
+    
+    return indicator
+  }()
+  
+  lazy var refreshControl: UIRefreshControl = {
+    let control = UIRefreshControl()
+    control.addTarget(self, action: #selector(didPullToRefresh), for: .valueChanged)
+    return control
+  }()
+  
   private let fundsListPresenter = FundsListPresenter()
   
   private var funds = [FundInvestment]() {
     didSet {
       collectionView.reloadData()
+      collectionView.refreshControl?.endRefreshing()
     }
   }
 }
@@ -23,16 +39,25 @@ class FundsListViewController: UIViewController {
 // MARK: - FundsListPresenterDelegate
 extension FundsListViewController: FundsListPresenterDelegate {
   func didStartLoading() {
+    collectionView.isHidden = true
     
+    indicatorActivityView.isHidden = false
+    indicatorActivityView.startAnimating()
   }
   
   func didFinishLoading() {
-    
+    indicatorActivityView.isHidden = true
+    indicatorActivityView.stopAnimating()
   }
   
   func didShowEmptyFunds() {
     collectionView.isHidden = true
-    // Show empty view
+    
+    guard let label = collectionView.backgroundView as? UILabel else {
+      return
+    }
+    
+    label.text = "Sem fundos"
   }
   
   func didLoadFundsList(_ funds: [FundInvestment]) {
@@ -41,7 +66,13 @@ extension FundsListViewController: FundsListPresenterDelegate {
   }
   
   func didFinishedWithError(_ error: Error) {
-    // Show some error modal view
+    collectionView.isHidden = true
+    
+    guard let label = collectionView.backgroundView as? UILabel else {
+      return
+    }
+    
+    label.text = "Não foi possível carregar a sua lista de fundos"
   }
 }
 
@@ -49,7 +80,10 @@ extension FundsListViewController: FundsListPresenterDelegate {
 extension FundsListViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    view.addSubview(indicatorActivityView)
     configureCollectionView()
+    
     fundsListPresenter.delegate = self
     fundsListPresenter.getFundsList()
   }
@@ -69,9 +103,15 @@ extension FundsListViewController {
 // MARK: - FundsListViewController custom methods
 extension FundsListViewController {
   func configureCollectionView() {
+    collectionView.isHidden = true
+    collectionView.refreshControl = refreshControl
     collectionView.register(UINib(nibName: "FundListCollectionCell", bundle: nil), forCellWithReuseIdentifier: "FundListCollectionCell")
     collectionView.dataSource = self
     collectionView.delegate = self
+  }
+  
+  @objc func didPullToRefresh() {
+    fundsListPresenter.getFundsList()
   }
 }
 
