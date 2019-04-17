@@ -35,7 +35,6 @@
 		8FE8E80822636DB500D0D255 /* FundInvestment.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FE8E80622636DB500D0D255 /* FundInvestment.storyboard */; };
 		8FE8E80A22636DB700D0D255 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8FE8E80922636DB700D0D255 /* Assets.xcassets */; };
 		8FE8E80D22636DB700D0D255 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8FE8E80B22636DB700D0D255 /* LaunchScreen.storyboard */; };
-		8FE8E81822636DB700D0D255 /* FundInvestmentDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE8E81722636DB700D0D255 /* FundInvestmentDemoTests.swift */; };
 		8FE8E8242263745D00D0D255 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE8E8232263745D00D0D255 /* APIClient.swift */; };
 		8FE8E8262263765500D0D255 /* APIClient+Requests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE8E8252263765500D0D255 /* APIClient+Requests.swift */; };
 		8FE8E8292263788600D0D255 /* FundInvestment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FE8E8282263788600D0D255 /* FundInvestment.swift */; };
@@ -50,18 +49,7 @@
 		8FEB8866226539C7008D91EC /* ALTextFieldView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FEB8865226539C7008D91EC /* ALTextFieldView.xib */; };
 		8FEB886822653B9B008D91EC /* ALTextFieldSingleInputModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEB886722653B9B008D91EC /* ALTextFieldSingleInputModalView.swift */; };
 		8FEB886A22653C0B008D91EC /* ALTextFieldSingleInputModalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FEB886922653C0B008D91EC /* ALTextFieldSingleInputModalView.xib */; };
-		A13F1E6D2EEF3C53F2BA79BD /* Pods_FundInvestmentDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 188052723C52A1853FACD835 /* Pods_FundInvestmentDemoTests.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		8FE8E81422636DB700D0D255 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8FE8E7F722636DB400D0D255 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8FE8E7FE22636DB400D0D255;
-			remoteInfo = FundInvestmentDemo;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		188052723C52A1853FACD835 /* Pods_FundInvestmentDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FundInvestmentDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,9 +84,6 @@
 		8FE8E80922636DB700D0D255 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8FE8E80C22636DB700D0D255 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8FE8E80E22636DB700D0D255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8FE8E81322636DB700D0D255 /* FundInvestmentDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FundInvestmentDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8FE8E81722636DB700D0D255 /* FundInvestmentDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundInvestmentDemoTests.swift; sourceTree = "<group>"; };
-		8FE8E81922636DB700D0D255 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8FE8E8232263745D00D0D255 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		8FE8E8252263765500D0D255 /* APIClient+Requests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIClient+Requests.swift"; sourceTree = "<group>"; };
 		8FE8E8282263788600D0D255 /* FundInvestment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundInvestment.swift; sourceTree = "<group>"; };
@@ -124,14 +109,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				09348E5AFF505846CC5FF69D /* Pods_FundInvestmentDemo.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8FE8E81022636DB700D0D255 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A13F1E6D2EEF3C53F2BA79BD /* Pods_FundInvestmentDemoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,7 +202,6 @@
 			isa = PBXGroup;
 			children = (
 				8FE8E80122636DB500D0D255 /* FundInvestmentDemo */,
-				8FE8E81622636DB700D0D255 /* FundInvestmentDemoTests */,
 				8FE8E80022636DB500D0D255 /* Products */,
 				F70277DC705EB491C432AD46 /* Pods */,
 				FD932273EFE3B5A7F393F767 /* Frameworks */,
@@ -236,7 +212,6 @@
 			isa = PBXGroup;
 			children = (
 				8FE8E7FF22636DB500D0D255 /* FundInvestmentDemo.app */,
-				8FE8E81322636DB700D0D255 /* FundInvestmentDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -257,15 +232,6 @@
 				8F4FCDBA2266A96400F8CF81 /* README.md */,
 			);
 			path = FundInvestmentDemo;
-			sourceTree = "<group>";
-		};
-		8FE8E81622636DB700D0D255 /* FundInvestmentDemoTests */ = {
-			isa = PBXGroup;
-			children = (
-				8FE8E81722636DB700D0D255 /* FundInvestmentDemoTests.swift */,
-				8FE8E81922636DB700D0D255 /* Info.plist */,
-			);
-			path = FundInvestmentDemoTests;
 			sourceTree = "<group>";
 		};
 		8FE8E822226373AF00D0D255 /* API */ = {
@@ -362,25 +328,6 @@
 			productReference = 8FE8E7FF22636DB500D0D255 /* FundInvestmentDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8FE8E81222636DB700D0D255 /* FundInvestmentDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 8FE8E81F22636DB700D0D255 /* Build configuration list for PBXNativeTarget "FundInvestmentDemoTests" */;
-			buildPhases = (
-				374384310F76AED26CD4712B /* [CP] Check Pods Manifest.lock */,
-				8FE8E80F22636DB700D0D255 /* Sources */,
-				8FE8E81022636DB700D0D255 /* Frameworks */,
-				8FE8E81122636DB700D0D255 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				8FE8E81522636DB700D0D255 /* PBXTargetDependency */,
-			);
-			name = FundInvestmentDemoTests;
-			productName = FundInvestmentDemoTests;
-			productReference = 8FE8E81322636DB700D0D255 /* FundInvestmentDemoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -393,10 +340,6 @@
 				TargetAttributes = {
 					8FE8E7FE22636DB400D0D255 = {
 						CreatedOnToolsVersion = 10.1;
-					};
-					8FE8E81222636DB700D0D255 = {
-						CreatedOnToolsVersion = 10.1;
-						TestTargetID = 8FE8E7FE22636DB400D0D255;
 					};
 				};
 			};
@@ -414,7 +357,6 @@
 			projectRoot = "";
 			targets = (
 				8FE8E7FE22636DB400D0D255 /* FundInvestmentDemo */,
-				8FE8E81222636DB700D0D255 /* FundInvestmentDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -438,13 +380,6 @@
 				8FE8E80822636DB500D0D255 /* FundInvestment.storyboard in Resources */,
 				8F4FCDCA2266ADDA00F8CF81 /* IMG_5673.PNG in Resources */,
 				8F4FCDC42266ADDA00F8CF81 /* IMG_5672.PNG in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8FE8E81122636DB700D0D255 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,28 +418,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FundInvestmentDemo/Pods-FundInvestmentDemo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		374384310F76AED26CD4712B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-FundInvestmentDemoTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7913B978A7B524C773578501 /* [CP] Check Pods Manifest.lock */ = {
@@ -566,23 +479,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8FE8E80F22636DB700D0D255 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8FE8E81822636DB700D0D255 /* FundInvestmentDemoTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		8FE8E81522636DB700D0D255 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8FE8E7FE22636DB400D0D255 /* FundInvestmentDemo */;
-			targetProxy = 8FE8E81422636DB700D0D255 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8FE8E80622636DB500D0D255 /* FundInvestment.storyboard */ = {
@@ -760,48 +657,6 @@
 			};
 			name = Release;
 		};
-		8FE8E82022636DB700D0D255 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = A3F9F5A4FF66B584CA0450A4 /* Pods-FundInvestmentDemoTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = FundInvestmentDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.amarildo.FundInvestmentDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FundInvestmentDemo.app/FundInvestmentDemo";
-			};
-			name = Debug;
-		};
-		8FE8E82122636DB700D0D255 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 59692494A1BCC55E4C8E74CA /* Pods-FundInvestmentDemoTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = FundInvestmentDemoTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.amarildo.FundInvestmentDemoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FundInvestmentDemo.app/FundInvestmentDemo";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -819,15 +674,6 @@
 			buildConfigurations = (
 				8FE8E81D22636DB700D0D255 /* Debug */,
 				8FE8E81E22636DB700D0D255 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		8FE8E81F22636DB700D0D255 /* Build configuration list for PBXNativeTarget "FundInvestmentDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				8FE8E82022636DB700D0D255 /* Debug */,
-				8FE8E82122636DB700D0D255 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
