@@ -22,7 +22,7 @@ class FundPurchaseAuthenticationModalViewController: UIViewController {
   
   weak var fundPurchaseAuthenticationModalViewControllerDelegate: FundPurchaseAuthenticationModalViewControllerDelegate?
   
-  let fundPurchaseAuthenticationPresenter = FundPurchaseAuthenticationPresenter()
+  private let fundPurchaseAuthenticationPresenter = FundPurchaseAuthenticationPresenter()
   var fundInvestment: FundInvestment?
 }
 
@@ -84,7 +84,7 @@ extension FundPurchaseAuthenticationModalViewController {
 
 // MARK: - UIKeyBoard events
 extension FundPurchaseAuthenticationModalViewController {
-  func showsKeyBoard() {
+  private func showsKeyBoard() {
     NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
   }
   

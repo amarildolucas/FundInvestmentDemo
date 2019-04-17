@@ -12,7 +12,7 @@ import RealmSwift
 protocol FundsPurchasedPresenterDelegate: NSObjectProtocol {
   func didStartLoading()
   func didFinishLoading()
-  func didShowEmptyPurchasedFunds()
+  func didShowEmptyPurchasedFunds(_ message: String)
   func didLoadFundsPurchased(_ funds: Results<FundPurchase>)
   func didFinishWithError(_ message: String)
 }
@@ -33,7 +33,7 @@ class FundsPurchasedPresenter {
         if funds.count > 0 {
           self.delegate?.didLoadFundsPurchased(funds)
         } else {
-          self.delegate?.didShowEmptyPurchasedFunds()
+          self.delegate?.didShowEmptyPurchasedFunds("Você ainda não possui nenhum fundo.")
         }
       } catch let error {
         self.delegate?.didFinishWithError(error.localizedDescription)

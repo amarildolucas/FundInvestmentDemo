@@ -45,10 +45,10 @@ extension FundsPurchasedViewController: FundsPurchasedPresenterDelegate {
     indicatorActivityView.stopAnimating()
   }
   
-  func didShowEmptyPurchasedFunds() {
+  func didShowEmptyPurchasedFunds(_ message: String) {
     collectionView.isHidden = true
     descriptionLabel.isHidden = false
-    descriptionLabel.text = "Você ainda não possui nenhum fundo."
+    descriptionLabel.text = message
   }
   
   func didLoadFundsPurchased(_ funds: Results<FundPurchase>) {
@@ -72,6 +72,7 @@ extension FundsPurchasedViewController {
   
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(true)
+    
     fundsPurchasedPresenter.delegate = self
     fundsPurchasedPresenter.getFundsPurchased()
   }

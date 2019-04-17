@@ -14,9 +14,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
 
   func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-    // Delete all database saved data everytime the the app is launched.
+    // Delete all database saved data everytime that the the app is launched to facilitate the test.
     resetAppData()
 
+    // Use this password harded code on Keychain only to demonstrate the payment authorization flow. Could be UserDefaults, but not the right local for this type of things.
     UserAccess.authentication = "password"
       
     return true
@@ -24,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 extension AppDelegate {
-  func resetAppData() {
+  private func resetAppData() {
     do {
       let realm = try Realm()
       try realm.write {

@@ -8,6 +8,7 @@
 
 import Foundation
 
+// Created this class as a simple helper for the basic api configuration.
 struct APIClient {
   struct Resources {
     static let fundDetailFull = "/fund_detail_full.json"

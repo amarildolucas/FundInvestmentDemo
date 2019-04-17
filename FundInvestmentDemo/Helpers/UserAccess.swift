@@ -9,6 +9,7 @@
 import Foundation
 import KeychainAccess
 
+// This class was only created to simulate the payment authorization. The data it's hard code and without input because it's wasn't a requirement.
 class UserAccess {
   static let UA_EMAIL = "vmarildo@gmail.com"
   static let UA_PASSWORD = "password"

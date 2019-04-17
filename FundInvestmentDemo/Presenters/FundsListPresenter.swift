@@ -11,7 +11,7 @@ import Foundation
 protocol FundsListPresenterDelegate: NSObjectProtocol {
   func didStartLoading()
   func didFinishLoading()
-  func didShowEmptyFunds()
+  func didShowEmptyFunds(_ message: String)
   func didLoadFundsList(_ funds: [FundInvestment])
   func didFinishedWithError(_ message: String)
 }
@@ -19,13 +19,17 @@ protocol FundsListPresenterDelegate: NSObjectProtocol {
 class FundsListPresenter {
   weak var delegate: FundsListPresenterDelegate?
   
+  // Rather to add the APIClient as dependecy on init(), a choose to add only the right static methods as the APIClient will grow. So, avoid to instantiate to much data or maybe using services colud helping to separate the concerns.
+  
   func getFundsList() {
     delegate?.didStartLoading()
+    
     APIClient.getFundsList(completion: { [weak self] funds in
       self?.delegate?.didFinishLoading()
+    
       if let funds = funds as? [FundInvestment] {
         if funds.count == 0 {
-          self?.delegate?.didShowEmptyFunds()
+          self?.delegate?.didShowEmptyFunds("Sem fundos")
         } else {
           self?.delegate?.didLoadFundsList(Array(funds.prefix(6)))
         }

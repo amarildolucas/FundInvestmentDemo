@@ -29,8 +29,23 @@ class FundsContainerViewController: UIViewController {
     return viewController
   }()
   
-  // TODO: Should go to the presenter?
-  let segmentItems = ["Lista de fundos", "Meus fundos"]
+  private let fundsContainerPresenter = FundsContainerPresenter()
+  let segmentItems = [String]()
+}
+
+// MARK: - FundsContainerPresenterDelegate
+extension FundsContainerViewController: FundsContainerPresenterDelegate {
+  func didLoad(_ segmentTitles: [String]) {
+    segmentedControlView.segmentItems = segmentTitles
+    
+    segmentedControlView.didSelectSegment = { sender in
+      self.indexDidChangeForSegmentedControl(sender)
+    }
+    
+    segmentedControlView.segmentControl.selectedSegmentIndex = SegmentIndex.fundsList.rawValue
+    
+    displayCurrentSegment(SegmentIndex.fundsList.rawValue)
+  }
 }
 
 // MARK: - UIViewController lifecycle
@@ -38,13 +53,8 @@ extension FundsContainerViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    segmentedControlView.segmentItems = segmentItems
-    segmentedControlView.didSelectSegment = { sender in
-      self.indexDidChangeForSegmentedControl(sender)
-    }
-    segmentedControlView.segmentControl.selectedSegmentIndex = SegmentIndex.fundsList.rawValue
-    
-    displayCurrentSegment(SegmentIndex.fundsList.rawValue)
+    fundsContainerPresenter.delegate = self
+    fundsContainerPresenter.load()
   }
   
   override func viewWillDisappear(_ animated: Bool) {

@@ -45,10 +45,10 @@ extension FundsListViewController: FundsListPresenterDelegate {
     indicatorActivityView.stopAnimating()
   }
   
-  func didShowEmptyFunds() {
+  func didShowEmptyFunds(_ message: String) {
     collectionView.isHidden = true
     descriptionLabel.isHidden = false
-    descriptionLabel.text = "Sem fundos"
+    descriptionLabel.text = message
   }
   
   func didLoadFundsList(_ funds: [FundInvestment]) {
@@ -68,6 +68,7 @@ extension FundsListViewController: FundsListPresenterDelegate {
 extension FundsListViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
+    
     fundsListPresenter.delegate = self
     fundsListPresenter.getFundsList()
   }

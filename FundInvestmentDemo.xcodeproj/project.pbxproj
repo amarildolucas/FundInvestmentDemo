@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		09348E5AFF505846CC5FF69D /* Pods_FundInvestmentDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD26CF43FFE248B6E5ADCF80 /* Pods_FundInvestmentDemo.framework */; };
+		8F3A7A7A2267482E00EA2FE6 /* FundsContainerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F3A7A792267482E00EA2FE6 /* FundsContainerPresenter.swift */; };
 		8F4FCDA02265400200F8CF81 /* FundPurchaseAuthenticationModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4FCD9F2265400200F8CF81 /* FundPurchaseAuthenticationModalViewController.swift */; };
 		8F4FCDA22266039D00F8CF81 /* FundPurchaseAuthenticationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4FCDA12266039D00F8CF81 /* FundPurchaseAuthenticationPresenter.swift */; };
 		8F4FCDA4226604BB00F8CF81 /* UserAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4FCDA3226604BB00F8CF81 /* UserAccess.swift */; };
@@ -55,6 +56,7 @@
 		188052723C52A1853FACD835 /* Pods_FundInvestmentDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FundInvestmentDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		588D5B71040EB82AC42327DC /* Pods-FundInvestmentDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FundInvestmentDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-FundInvestmentDemo/Pods-FundInvestmentDemo.release.xcconfig"; sourceTree = "<group>"; };
 		59692494A1BCC55E4C8E74CA /* Pods-FundInvestmentDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FundInvestmentDemoTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FundInvestmentDemoTests/Pods-FundInvestmentDemoTests.release.xcconfig"; sourceTree = "<group>"; };
+		8F3A7A792267482E00EA2FE6 /* FundsContainerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsContainerPresenter.swift; sourceTree = "<group>"; };
 		8F4FCD9F2265400200F8CF81 /* FundPurchaseAuthenticationModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundPurchaseAuthenticationModalViewController.swift; sourceTree = "<group>"; };
 		8F4FCDA12266039D00F8CF81 /* FundPurchaseAuthenticationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundPurchaseAuthenticationPresenter.swift; sourceTree = "<group>"; };
 		8F4FCDA3226604BB00F8CF81 /* UserAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccess.swift; sourceTree = "<group>"; };
@@ -260,9 +262,10 @@
 		8FE8E8372263819600D0D255 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
-				8FE8E838226381A900D0D255 /* FundsListPresenter.swift */,
 				8FB2492E2263C33100BA60EB /* FundDetailPresenter.swift */,
 				8F4FCDA12266039D00F8CF81 /* FundPurchaseAuthenticationPresenter.swift */,
+				8F3A7A792267482E00EA2FE6 /* FundsContainerPresenter.swift */,
+				8FE8E838226381A900D0D255 /* FundsListPresenter.swift */,
 				8F4FCDB1226648EB00F8CF81 /* FundsPurchasedPresenter.swift */,
 			);
 			path = Presenters;
@@ -468,6 +471,7 @@
 				8F4FCDB2226648EB00F8CF81 /* FundsPurchasedPresenter.swift in Sources */,
 				8FE8E8292263788600D0D255 /* FundInvestment.swift in Sources */,
 				8FE8E80322636DB500D0D255 /* AppDelegate.swift in Sources */,
+				8F3A7A7A2267482E00EA2FE6 /* FundsContainerPresenter.swift in Sources */,
 				8F4FCDAC2266205700F8CF81 /* String+Extension.swift in Sources */,
 				8FEB8861226521C3008D91EC /* UIColor+Extension.swift in Sources */,
 				8FB2492D2263BB7A00BA60EB /* FundDetailViewController.swift in Sources */,
