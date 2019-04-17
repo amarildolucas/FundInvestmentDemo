@@ -9,17 +9,21 @@
 import UIKit
 
 class FundsListViewController: UIViewController {
-  @IBOutlet var collectionView: UICollectionView!
+  @IBOutlet var collectionView: UICollectionView! {
+    didSet {
+      let refreshControl = UIRefreshControl()
+      refreshControl.addTarget(self, action: #selector(didPullToRefresh), for: .valueChanged)
+      
+      collectionView.refreshControl = refreshControl
+      collectionView.register(UINib(nibName: FundListCollectionCell.nibName, bundle: nil), forCellWithReuseIdentifier: FundListCollectionCell.identifier)
+      collectionView.dataSource = self
+      collectionView.delegate = self
+    }
+  }
   @IBOutlet weak var indicatorActivityView: UIActivityIndicatorView!
-  
-  lazy var refreshControl: UIRefreshControl = {
-    let control = UIRefreshControl()
-    control.addTarget(self, action: #selector(didPullToRefresh), for: .valueChanged)
-    return control
-  }()
+  @IBOutlet weak var descriptionLabel: UILabel!
   
   private let fundsListPresenter = FundsListPresenter()
-  
   private var funds = [FundInvestment]() {
     didSet {
       collectionView.reloadData()
@@ -32,7 +36,6 @@ class FundsListViewController: UIViewController {
 extension FundsListViewController: FundsListPresenterDelegate {
   func didStartLoading() {
     collectionView.isHidden = true
-    
     indicatorActivityView.isHidden = false
     indicatorActivityView.startAnimating()
   }
@@ -44,27 +47,20 @@ extension FundsListViewController: FundsListPresenterDelegate {
   
   func didShowEmptyFunds() {
     collectionView.isHidden = true
-    
-    guard let label = collectionView.backgroundView as? UILabel else {
-      return
-    }
-    
-    label.text = "Sem fundos"
+    descriptionLabel.isHidden = false
+    descriptionLabel.text = "Sem fundos"
   }
   
   func didLoadFundsList(_ funds: [FundInvestment]) {
     collectionView.isHidden = false
+    descriptionLabel.isHidden = true
     self.funds = funds
   }
   
-  func didFinishedWithError(_ error: Error) {
+  func didFinishedWithError(_ message: String) {
     collectionView.isHidden = true
-    
-    guard let label = collectionView.backgroundView as? UILabel else {
-      return
-    }
-    
-    label.text = "Não foi possível carregar a sua lista de fundos"
+    descriptionLabel.isHidden = false
+    descriptionLabel.text = message
   }
 }
 
@@ -72,10 +68,6 @@ extension FundsListViewController: FundsListPresenterDelegate {
 extension FundsListViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    indicatorActivityView.isHidden = true
-    configureCollectionView()
-    
     fundsListPresenter.delegate = self
     fundsListPresenter.getFundsList()
   }
@@ -94,14 +86,6 @@ extension FundsListViewController {
 
 // MARK: - FundsListViewController custom methods
 extension FundsListViewController {
-  func configureCollectionView() {
-    collectionView.isHidden = true
-    collectionView.refreshControl = refreshControl
-    collectionView.register(UINib(nibName: FundListCollectionCell.nibName, bundle: nil), forCellWithReuseIdentifier: FundListCollectionCell.identifier)
-    collectionView.dataSource = self
-    collectionView.delegate = self
-  }
-  
   @objc func didPullToRefresh() {
     fundsListPresenter.getFundsList()
   }
@@ -142,6 +126,7 @@ extension FundsListViewController: UICollectionViewDelegate {
   }
 }
 
+// MARK: - UICollectionViewDelegateFlowLayout
 extension FundsListViewController: UICollectionViewDelegateFlowLayout {
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     return CGSize(width: collectionView.bounds.size.width, height: FundListCollectionCell.fundListCollectionCellHeight)

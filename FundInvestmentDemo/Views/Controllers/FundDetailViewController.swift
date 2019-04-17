@@ -36,6 +36,7 @@ extension FundDetailViewController {
       if let viewController = segue.destination as? FundPurchaseAuthenticationModalViewController {
         if let fund = fundDetail {
           viewController.fundInvestment = fund
+          viewController.fundPurchaseAuthenticationModalViewControllerDelegate = self
         }
       }
     }
@@ -52,7 +53,14 @@ extension FundDetailViewController: FundDetailPresenterDelegate {
     
     fullNameLabel.text = fund.fullName
     initialDateLabel.text = fund.initialDate
-    fundManagerDescriptionLabel.text =  fund.fundManager?.description
+    fundManagerDescriptionLabel.text = fund.fundManager?.description
+  }
+}
+
+// MARK: - FundPurchaseAuthenticationModalViewControllerDelegate
+extension FundDetailViewController: FundPurchaseAuthenticationModalViewControllerDelegate {  
+  func didDismissViewController() {
+    navigationController?.popViewController(animated: true)
   }
 }
 

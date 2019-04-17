@@ -10,22 +10,18 @@ import UIKit
 import RealmSwift
 
 class FundsPurchasedViewController: UIViewController {
-  @IBOutlet weak var collectionView: UICollectionView!
-  
-  lazy var indicatorActivityView: UIActivityIndicatorView = {
-    let indicator = UIActivityIndicatorView()
-    indicator.center = self.view.center
-    indicator.tintColor = UIColor(red: 34/255, green: 156/255, blue: 160/255, alpha: 1.0)
-    indicator.style = .whiteLarge
-    
-    return indicator
-  }()
-  
-  lazy var refreshControl: UIRefreshControl = {
-    let control = UIRefreshControl()
-    control.addTarget(self, action: #selector(didPullToRefresh), for: .valueChanged)
-    return control
-  }()
+  @IBOutlet weak var collectionView: UICollectionView! {
+    didSet {
+      let refreshControl = UIRefreshControl()
+      refreshControl.addTarget(self, action: #selector(didPullToRefresh), for: .valueChanged)
+      
+      collectionView.refreshControl = refreshControl
+      collectionView.register(UINib(nibName: FundListCollectionCell.nibName, bundle: nil), forCellWithReuseIdentifier: FundListCollectionCell.identifier)
+      collectionView.dataSource = self
+    }
+  }
+  @IBOutlet weak var indicatorActivityView: UIActivityIndicatorView!
+  @IBOutlet weak var descriptionLabel: UILabel!
   
   private let fundsPurchasedPresenter = FundsPurchasedPresenter()
   var funds: Results<FundPurchase> = try! Realm().objects(FundPurchase.self) {
@@ -40,7 +36,6 @@ class FundsPurchasedViewController: UIViewController {
 extension FundsPurchasedViewController: FundsPurchasedPresenterDelegate {
   func didStartLoading() {
     collectionView.isHidden = true
-    
     indicatorActivityView.isHidden = false
     indicatorActivityView.startAnimating()
   }
@@ -52,25 +47,20 @@ extension FundsPurchasedViewController: FundsPurchasedPresenterDelegate {
   
   func didShowEmptyPurchasedFunds() {
     collectionView.isHidden = true
-    
-    guard let label = collectionView.backgroundView as? UILabel else {
-      return
-    }
-    
-    label.text = "Você ainda não possui nenhum fundo"
+    descriptionLabel.isHidden = false
+    descriptionLabel.text = "Você ainda não possui nenhum fundo."
   }
   
   func didLoadFundsPurchased(_ funds: Results<FundPurchase>) {
     collectionView.isHidden = false
+    descriptionLabel.isHidden = true
     self.funds = funds
   }
   
   func didFinishWithError(_ message: String) {
-    guard let label = collectionView.backgroundView as? UILabel else {
-      return
-    }
-    
-    label.text = message
+    collectionView.isHidden = true
+    descriptionLabel.isHidden = false
+    descriptionLabel.text = message
   }
 }
 
@@ -78,9 +68,6 @@ extension FundsPurchasedViewController: FundsPurchasedPresenterDelegate {
 extension FundsPurchasedViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
-    
-    view.addSubview(indicatorActivityView)
-    configureCollectionView()
   }
   
   override func viewDidAppear(_ animated: Bool) {
@@ -92,13 +79,6 @@ extension FundsPurchasedViewController {
 
 // MARK: - FundsPurchasedViewController custom methods
 extension FundsPurchasedViewController {
-  func configureCollectionView() {
-    collectionView.isHidden = true
-    collectionView.refreshControl = refreshControl
-    collectionView.register(UINib(nibName: FundListCollectionCell.nibName, bundle: nil), forCellWithReuseIdentifier: FundListCollectionCell.identifier)
-    collectionView.dataSource = self
-  }
-  
   @objc func didPullToRefresh() {
     fundsPurchasedPresenter.getFundsPurchased()
   }
@@ -106,6 +86,10 @@ extension FundsPurchasedViewController {
 
 // MARK: - UICollectionViewDataSource
 extension FundsPurchasedViewController: UICollectionViewDataSource {
+  func numberOfSections(in collectionView: UICollectionView) -> Int {
+    return 1
+  }
+  
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return funds.count
   }
@@ -125,5 +109,12 @@ extension FundsPurchasedViewController: UICollectionViewDataSource {
     }
     
     return cell
+  }
+}
+
+// MARK: - UICollectionViewDelegateFlowLayout
+extension FundsPurchasedViewController: UICollectionViewDelegateFlowLayout {
+  func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    return CGSize(width: collectionView.bounds.size.width, height: FundListCollectionCell.fundListCollectionCellHeight)
   }
 }

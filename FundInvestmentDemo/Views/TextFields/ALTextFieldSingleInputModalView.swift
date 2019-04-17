@@ -45,9 +45,6 @@ extension ALTextFieldSingleInputModalView {
   
   private func configureSubviews() {
     cancelButton.layer.cornerRadius = 4
-    cancelButton.layer.borderColor = UIColor.gray.cgColor
-    cancelButton.layer.borderWidth = 1.5
-    
-    confirmButton.layer.cornerRadius = 2
+    confirmButton.layer.cornerRadius = 4
   }
 }

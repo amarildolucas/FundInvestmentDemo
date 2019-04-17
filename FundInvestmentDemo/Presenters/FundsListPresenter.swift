@@ -13,7 +13,7 @@ protocol FundsListPresenterDelegate: NSObjectProtocol {
   func didFinishLoading()
   func didShowEmptyFunds()
   func didLoadFundsList(_ funds: [FundInvestment])
-  func didFinishedWithError(_ error: Error)
+  func didFinishedWithError(_ message: String)
 }
 
 class FundsListPresenter {
@@ -31,7 +31,7 @@ class FundsListPresenter {
         }
       }
     }) { error, _ in
-      self.delegate?.didFinishedWithError(error)
+      self.delegate?.didFinishedWithError(error.localizedDescription)
     }
   }
 }

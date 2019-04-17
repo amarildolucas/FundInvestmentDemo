@@ -24,7 +24,7 @@ class FundPurchaseAuthenticationPresenter {
     if UserAccess.authentication == password {
       delegate?.didFinishAuthenticationWithSuccess()
     } else {
-      delegate?.didFinishAuthenticationWithError("Credencias erradas: não foi possível autorizar o pagamento.")
+      delegate?.didFinishAuthenticationWithError("Credencias erradas")
     }
   }
   

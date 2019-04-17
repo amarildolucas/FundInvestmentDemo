@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol FundPurchaseAuthenticationModalViewControllerDelegate: NSObjectProtocol {
+  func didDismissViewController()
+}
+
 class FundPurchaseAuthenticationModalViewController: UIViewController {
   @IBOutlet weak var modalView: ALTextFieldSingleInputModalView!
   @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
@@ -15,6 +19,8 @@ class FundPurchaseAuthenticationModalViewController: UIViewController {
   @IBAction func didTapGestureRecognizer(_ sender: UITapGestureRecognizer) {
     hidesKeyboard()
   }
+  
+  weak var fundPurchaseAuthenticationModalViewControllerDelegate: FundPurchaseAuthenticationModalViewControllerDelegate?
   
   let fundPurchaseAuthenticationPresenter = FundPurchaseAuthenticationPresenter()
   var fundInvestment: FundInvestment?
@@ -36,8 +42,8 @@ extension FundPurchaseAuthenticationModalViewController: FundPurchaseAuthenticat
   }
   
   func didPurchaseFundWithSuccess(_ fund: FundPurchase) {
-    dismiss(animated: true) {
-      self.navigationController?.popViewController(animated: true)
+    dismiss(animated: false) {
+      self.fundPurchaseAuthenticationModalViewControllerDelegate?.didDismissViewController()
     }
   }
   
