@@ -18,6 +18,7 @@
 		8F4FCDB0226641C800F8CF81 /* FundPurchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4FCDAF226641C800F8CF81 /* FundPurchase.swift */; };
 		8F4FCDB2226648EB00F8CF81 /* FundsPurchasedPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4FCDB1226648EB00F8CF81 /* FundsPurchasedPresenter.swift */; };
 		8F4FCDB922667CEA00F8CF81 /* UICollectionViewCell+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4FCDB822667CEA00F8CF81 /* UICollectionViewCell+Extension.swift */; };
+		8F4FCDBB2266A96500F8CF81 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 8F4FCDBA2266A96400F8CF81 /* README.md */; };
 		8FB2492A22638F6300BA60EB /* FundListCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB2492822638F6300BA60EB /* FundListCollectionCell.swift */; };
 		8FB2492B22638F6300BA60EB /* FundListCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8FB2492922638F6300BA60EB /* FundListCollectionCell.xib */; };
 		8FB2492D2263BB7A00BA60EB /* FundDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB2492C2263BB7A00BA60EB /* FundDetailViewController.swift */; };
@@ -69,6 +70,7 @@
 		8F4FCDAF226641C800F8CF81 /* FundPurchase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundPurchase.swift; sourceTree = "<group>"; };
 		8F4FCDB1226648EB00F8CF81 /* FundsPurchasedPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsPurchasedPresenter.swift; sourceTree = "<group>"; };
 		8F4FCDB822667CEA00F8CF81 /* UICollectionViewCell+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+Extension.swift"; sourceTree = "<group>"; };
+		8F4FCDBA2266A96400F8CF81 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		8FB2492822638F6300BA60EB /* FundListCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundListCollectionCell.swift; sourceTree = "<group>"; };
 		8FB2492922638F6300BA60EB /* FundListCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FundListCollectionCell.xib; sourceTree = "<group>"; };
 		8FB2492C2263BB7A00BA60EB /* FundDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundDetailViewController.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 				8FB24924226389F300BA60EB /* Views */,
 				8FE8E80222636DB500D0D255 /* AppDelegate.swift */,
 				8FE8E80E22636DB700D0D255 /* Info.plist */,
+				8F4FCDBA2266A96400F8CF81 /* README.md */,
 			);
 			path = FundInvestmentDemo;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				8FB2492B22638F6300BA60EB /* FundListCollectionCell.xib in Resources */,
 				8FE8E80D22636DB700D0D255 /* LaunchScreen.storyboard in Resources */,
 				8FEB886A22653C0B008D91EC /* ALTextFieldSingleInputModalView.xib in Resources */,
+				8F4FCDBB2266A96500F8CF81 /* README.md in Resources */,
 				8FEB8866226539C7008D91EC /* ALTextFieldView.xib in Resources */,
 				8FE8E80A22636DB700D0D255 /* Assets.xcassets in Resources */,
 				8FE8E80822636DB500D0D255 /* FundInvestment.storyboard in Resources */,
