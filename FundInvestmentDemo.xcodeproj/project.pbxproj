@@ -150,7 +150,7 @@
 		8F4FCDB42266781C00F8CF81 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8F4FCDBC2266ADBC00F8CF81 /* AppScreenResults */,
+				8F4FCDBC2266ADBC00F8CF81 /* Screenshots */,
 				8FE8E80922636DB700D0D255 /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -187,7 +187,7 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		8F4FCDBC2266ADBC00F8CF81 /* AppScreenResults */ = {
+		8F4FCDBC2266ADBC00F8CF81 /* Screenshots */ = {
 			isa = PBXGroup;
 			children = (
 				8F4FCDC12266ADDA00F8CF81 /* IMG_5668.PNG */,
@@ -198,7 +198,7 @@
 				8F4FCDC32266ADDA00F8CF81 /* IMG_5673.PNG */,
 				8F4FCDBE2266ADD900F8CF81 /* IMG_5674.PNG */,
 			);
-			path = AppScreenResults;
+			path = Screenshots;
 			sourceTree = "<group>";
 		};
 		8FB24924226389F300BA60EB /* Views */ = {

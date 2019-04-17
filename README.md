@@ -12,13 +12,13 @@
 
 # Screenshots
 
-![alt text](FundInvestmentDemo/Resources/AppScreenResults/IMG_5668.PNG)
-![alt text](FundInvestmentDemo/Resources/AppScreenResults/IMG_5669.PNG)
-![alt text](FundInvestmentDemo/Resources/AppScreenResults/IMG_5670.PNG)
-![alt text](FundInvestmentDemo/Resources/AppScreenResults/IMG_5671.PNG)
-![alt text](FundInvestmentDemo/Resources/AppScreenResults/IMG_5672.PNG)
-![alt text](FundInvestmentDemo/Resources/AppScreenResults/IMG_5673.PNG)
-![alt text](FundInvestmentDemo/Resources/AppScreenResults/IMG_5674.PNG)
+![alt text](FundInvestmentDemo/Resources/Screenshots/IMG_5668.PNG)
+![alt text](FundInvestmentDemo/Resources/Screenshots/IMG_5669.PNG)
+![alt text](FundInvestmentDemo/Resources/Screenshots/IMG_5670.PNG)
+![alt text](FundInvestmentDemo/Resources/Screenshots/IMG_5671.PNG)
+![alt text](FundInvestmentDemo/Resources/Screenshots/IMG_5672.PNG)
+![alt text](FundInvestmentDemo/Resources/Screenshots/IMG_5673.PNG)
+![alt text](FundInvestmentDemo/Resources/Screenshots/IMG_5674.PNG)
 
 # Youtube Video URL
 
